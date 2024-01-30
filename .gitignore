@@ -1,0 +1,9 @@
+/.vs
+/NDBPRules/obj
+/NDXPP/.vs
+/NDXPP/bin
+/NDXPP/obj
+/NDXPP/obj
+/packages
+/NDXPP/MigrationBackup
+/*.cache

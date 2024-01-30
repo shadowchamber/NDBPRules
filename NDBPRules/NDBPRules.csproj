@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\Current\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\Current\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29FA4DB9-A30D-49EE-AA01-17AA6B148D63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NDBPRules</RootNamespace>
+    <AssemblyName>NDBPRules</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <SkipAssemblyComVisible>true</SkipAssemblyComVisible>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\AosService\PackagesLocalDirectory\bin\BPExtensions\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DynamicsPackagesFolder Condition="Exists('$(SERVICEDRIVE)\AOSService\PackagesLocalDirectory\bin')">$(SERVICEDRIVE)\AOSService\PackagesLocalDirectory\bin</DynamicsPackagesFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.AX.Framework.BestPracticeExtensions">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Framework.BestPracticeExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Framework.BestPractices.Common">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Framework.BestPractices.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Framework.MetaModel">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Framework.MetaModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Framework.Utilities">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Framework.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Framework.Xlnt.XppCore">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Framework.Xlnt.XppCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Framework.Xlnt.XppCore.Visitors">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Framework.Xlnt.XppCore.Visitors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Core">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Extensions">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Management.Core">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Management.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Management.Delta">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Management.Delta.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Management.Diff">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Management.Diff.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Management.Merge">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Management.Merge.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Management.Merge.Strategies">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Management.Merge.Strategies.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Management.Messaging">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Management.Messaging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Management.Processing">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Management.Processing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Modeling">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Modeling.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Navigation">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.NodeLib">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.NodeLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Patterns">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Patterns.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Search">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Search.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Search.Menu">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Search.Menu.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Search.NavigationSearchProvider">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Search.NavigationSearchProvider.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Storage">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Storage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.TypeSystem">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.TypeSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Common">
+      <HintPath>C:\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Extensibility, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Extensibility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.CrossReference">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.CrossReference.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.DependencyGraph">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.DependencyGraph.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.Graph">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.Graph.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.Iterations">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.Iterations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.Metadata">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Sequencing.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Upgrade.Staging">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Upgrade.Staging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Validation">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Validation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Visitors">
+      <HintPath>..\..\..\AosService\PackagesLocalDirectory\bin\Microsoft.Dynamics.AX.Metadata.Visitors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InvalidCharactersDiagnosticItem.cs" />
+    <None Include="DemoASTCheck.cs" />
+    <None Include="DemoMetadataCheck.cs" />
+    <Compile Include="Metadata\DiagnosticItems\TableConfigurationKeyMissing.cs" />
+    <Compile Include="Metadata\DiagnosticItems\TableCacheLookupMissing.cs" />
+    <Compile Include="Metadata\DiagnosticItems\TableGroupMissing.cs" />
+    <Compile Include="Metadata\DiagnosticItems\ViewConfigurationKeyMissing.cs" />
+    <Compile Include="Metadata\Rules\TableChecks.cs" />
+    <None Include="NotAllowedWordDiagnosticItem.cs" />
+    <Compile Include="Metadata\Rules\ViewChecks.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\OverviewPage.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ast\DiagnosticItems\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NDXPP\NDXPP.csproj">
+      <Project>{a1d73bf2-cd2a-43c0-b3e7-868f377cfe63}</Project>
+      <Name>NDXPP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

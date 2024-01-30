@@ -1,0 +1,128 @@
+﻿/// <summary>
+/// Args extension.
+/// </summary>
+[ExtensionOf(classStr(Args))]
+public final class ArgsGwsIAM_Extension
+{
+    public void test()
+    {
+        info("test");
+    }
+
+    /// <summary>
+    /// Returns caller as FormRun.
+    /// </summary>
+    /// <returns>caller as FormRun.</returns>
+    public FormRun callerFormRun()
+    {
+        return this.callerFormRunInternal(false);
+    }
+
+    /// <summary>
+    /// Returns caller as FormRun with validation.
+    /// </summary>
+    /// <returns>caller as FormRun.</returns>
+    public FormRun callerFormRunSafe()
+    {
+        return this.callerFormRunInternal(true);
+    }
+
+    /// <summary>
+    /// Returns caller as FormRun, validation optional.
+    /// </summary>
+    /// <param name = ""_throwException"">throw exception if true and caller is not FormRun.</param>
+    /// <returns>caller as FormRun.</returns>
+    private FormRun callerFormRunInternal(boolean _throwException 
+        = false // test
+        | false 
+        )
+    {
+        InventTable table;
+        InventTable table2;
+        InventTable table3;
+
+        select firstonly forupdate table
+            where table.RecId == 567;
+
+        select table
+            order by RecId, DataAreaId
+            where table.RecId == 567;
+
+        select RecId from table
+            order by RecId, DataAreaId
+            where table.RecId == 567;
+
+        select RecId, DataAreaId from table
+            order by RecId
+            where table.RecId == 567;
+
+        select RecId, DataAreaId from table
+            order by table.RecId
+            where table.RecId == 567
+                || table.RecId == 678;
+
+        select RecId, DataAreaId from table
+            order by table.RecId
+            join table2
+            order RecId
+            where table2.RecId == 354
+            ;
+
+        select RecId, DataAreaId from table
+            order by table.RecId
+            where table.RecId == 567
+                || table.RecId == 678
+            outer join table2
+            order RecId
+            where table2.RecId == 354
+            ;
+
+        select RecId, DataAreaId from table
+            order by table.RecId
+            where table.RecId == 567
+                || table.RecId == 678
+            exists join table2
+            order RecId
+            where table2.RecId == 354
+            ;
+
+        select RecId, DataAreaId from table
+            order by table.RecId
+            where table.RecId == 567
+                || table.RecId == 678
+            notexists join table2
+            order RecId
+            where table2.RecId == 354
+            ;
+
+        select RecId, DataAreaId from table
+            order by table.RecId
+            where table.RecId == 567
+                || table.RecId == 678
+            join table2
+            order RecId
+            where table2.RecId == 354
+            notexists join table3
+            order RecId
+            where table3.RecId == 354
+            ;
+
+        while select table
+        {
+            info(table.NameAlias);
+        }
+
+        FormRun res;
+
+        res = this.caller() as FormRun;
+
+        if (_throwException
+            && !res)
+        {
+            throw error("Caller is not FormRun object");
+        }
+
+        return res;
+    }
+
+}
